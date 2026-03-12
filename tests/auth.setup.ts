@@ -8,7 +8,6 @@ setup('login and save session', async ({ page }) => {
   await loginPage.goto('/login/')
   await loginPage.login('admin@example.com','123456')
   await page.waitForURL('https://cms.anhtester.com/admin')
-  await page.context().storageState({ path: 'storageState.json' })
   
   await page.context().storageState({ path: authFile })
 
